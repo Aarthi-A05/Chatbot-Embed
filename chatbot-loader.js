@@ -7,7 +7,7 @@
     email: settings.email || "",
     created_at: settings.created_at || "",
   }).toString();
-
+  console.log("🚀 chatbotSettings:", window.chatbotSettings);
   const iframe = document.createElement("iframe");
   iframe.src = `https://quickassist-bot.netlify.app?${queryParams}`; // add params
   iframe.style.position = "fixed";
@@ -19,6 +19,5 @@
   iframe.style.zIndex = "9999";
   iframe.style.backgroundColor = "transparent";
   iframe.allow = "microphone; camera";
-
   document.body.appendChild(iframe);
 })();
