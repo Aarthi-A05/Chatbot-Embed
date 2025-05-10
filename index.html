@@ -4,6 +4,25 @@
     <title>Test Chatbot Integration</title>
   </head>
   <body>
+    <script>
+      // Sample user data — dynamically populate in real use
+      const user = {
+        id: "user123",
+        name: "Aarthi A",
+        email: "aarthi@example.com",
+        createdAt: Math.floor(Date.now() / 1000), // Unix timestamp
+      };
+
+      window.chatbotSettings = {
+        api_base: "https://quickassist-api.example.com",
+        api_id: "quickassist-v1",
+        user_id: user.id,
+        name: user.name,
+        email: user.email,
+        created_at: user.createdAt,
+      };
+    </script>
+
     <script src="chatbot-loader.js" defer></script>
   </body>
 </html>
